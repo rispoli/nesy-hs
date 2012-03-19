@@ -1,6 +1,6 @@
 module RuleRTypes where
 
-import qualified Data.Set as S (Set, map)
+import qualified Data.Set as S (Set)
 
 type ObsrName = String
 

@@ -34,7 +34,7 @@ sz cs phi psi = let Right (r_phi, o_phi, p_phi, _, s_phi, q_phi) = tp phi
                     ssliqm_phi_psi_g                             = rn2suliru [srnqm_phi, srnqm_psi, S.singleton qmg]
                  in (foldl1 S.union [r_phi, r_psi, S.fromList [rpcp, qmg], srnqm_phi, srnqm_psi],
                      o_phi `S.union` o_psi,
-                     foldl1 S.union [p_phi, p_psi, S.singleton $ Rule rpcp S.empty S.empty, S.singleton $ Rule qmg S.empty ssliqm_phi_psi_g, sr psi q_psi S.empty, sr phi q_phi (S.singleton $ LiRu rpcp)],
+                     foldl1 S.union [p_phi, p_psi, S.singleton $ Rule rpcp S.empty (S.singleton S.empty), S.singleton $ Rule qmg S.empty ssliqm_phi_psi_g, sr psi q_psi S.empty, sr phi q_phi (S.singleton $ LiRu rpcp)],
                      ssliqm_phi_psi_g,
                      s_phi `S.union` s_psi,
                      ss . LiRu $ rpcp)
